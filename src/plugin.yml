@@ -1,8 +1,0 @@
-name: AdvancedSmelting
-version: 1.0
-description: An Advanced Smelting plugin
-main: me.jet315.smelting.Core
-softdepend: [Vault]
-commands:
-  smelt:
-    description: Smelts materials in your inventory!
