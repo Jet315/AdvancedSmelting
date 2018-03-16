@@ -37,9 +37,7 @@ Admin Commands & Permissions:
 - Use the command /smelt reload, or stop and start the server to reload the configuration file!
 
 # API
-For Developers who want to hook into the plugin:
-The event 'SmeltingStartEvent' is called whenever a player starts a smelting process.
-More information can be found here
+For Developers who want to hook into the plugin any events found here can be used: https://github.com/Jet315/AdvancedSmelting/tree/master/me/jet315/smelting/events
 
 # Support
 Any problems, questions or suggestions send me a PM on Spigot!
