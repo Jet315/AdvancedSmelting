@@ -109,6 +109,11 @@ public class SmeltManager {
             if(type == SmeltingType.INVENTORY) {
                 p.sendMessage(Core.getInstance().getProperties().getMessages().getNoItemInGUIMessage());
             }
+            if(type == SmeltingType.HAND){
+                for(ItemStack item : nullItems){
+                    p.getInventory().addItem(item);
+                }
+            }
             return;
         }
         if(nullItems.size() > 0){
