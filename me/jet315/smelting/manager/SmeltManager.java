@@ -111,6 +111,7 @@ public class SmeltManager {
             }
             if(type == SmeltingType.HAND){
                 for(ItemStack item : nullItems){
+                    System.out.println("HAND Gave a " +item.getType());
                     p.getInventory().addItem(item);
                 }
             }
@@ -118,6 +119,7 @@ public class SmeltManager {
         }
         if(nullItems.size() > 0){
             for(ItemStack item : nullItems){
+                System.out.println("NULL Gave a " +item.getType());
                 p.getInventory().addItem(item);
             }
         }

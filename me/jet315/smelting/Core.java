@@ -125,12 +125,16 @@ public class Core extends JavaPlugin {
 
     private boolean setupEconomy()
     {
-        RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
-        if (economyProvider != null) {
-            economy = economyProvider.getProvider();
-        }
+       try {
+           RegisteredServiceProvider<Economy> economyProvider = getServer().getServicesManager().getRegistration(Economy.class);
+           if (economyProvider != null) {
+               economy = economyProvider.getProvider();
+           }
 
-        return (economy != null);
+           return (economy != null);
+       }catch(NoClassDefFoundError e){
+        return false;
+       }
     }
 
     public SmeltingGUI getSmeltingGUI() {
