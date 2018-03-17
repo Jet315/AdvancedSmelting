@@ -53,7 +53,7 @@ public class SmeltingStartEvent extends Event implements Cancellable {
 
     /**
      *
-     * @param b If canceled, plugin with return Items
+     * @param b If this is canceled, the plugin will refund items IF the SmeltingType is INVENTORY, else it will not
      */
     @Override
     public void setCancelled(boolean b) {
@@ -62,7 +62,7 @@ public class SmeltingStartEvent extends Event implements Cancellable {
 
     /**
      *
-     * @return Gets the items that are going to be smelted, May return invalid items use
+     * @return Gets the items that are going to be smelted, This may return invalid items
      */
     public ArrayList<ItemStack> getItemList() {
         return itemList;
