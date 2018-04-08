@@ -25,7 +25,7 @@ public class CloseInventory implements Listener{
     @EventHandler
     public void onInventoryClose(InventoryCloseEvent e){
         Inventory inventory = e.getInventory();
-        if(Core.getInstance().getSmeltingGUI().isSmeltingInvetory(inventory)){
+        if(Core.getInstance().getSmeltingGUI().isSmeltingInventory(inventory)){
             if(Core.getInstance().getSmeltManager().getActivelySmelting().containsKey(e.getPlayer())) return;
             inventory.setItem(inventory.getSize()-1,null);
             ItemStack[] contents = inventory.getContents();

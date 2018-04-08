@@ -37,7 +37,8 @@ public class SmeltingGUI {
     public Inventory getSmeltingInventory(){
         return Bukkit.createInventory(null,inventorySize, inventoryName);
     }
-    public boolean isSmeltingInvetory(Inventory inventory){
+
+    public boolean isSmeltingInventory(Inventory inventory){
         return inventory.getName().equals(inventoryName) && inventory.getSize() == inventorySize;
     }
 

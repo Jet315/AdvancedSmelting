@@ -26,16 +26,16 @@ public class SmeltableItem {
     private ItemStack smeltedItemStack;
 
     //The exp to give when the item is smelted
-    private double expToGive = 0;
+    private double expToGive;
 
     //Stores the time (In milliseconds) used to smelt an object
-    private int timeToSmeltItem = 0;
+    private int timeToSmeltItem;
 
     //Stores the cost of coal needed to smelt an object
-    private double costOfCoalToSmelt = 0;
+    private double costOfCoalToSmelt;
 
     //Stores the cost ($$$) needed to smelt an object
-    private double costOfMoneyToSmelt = 0;
+    private double costOfMoneyToSmelt;
 
     /**
      *

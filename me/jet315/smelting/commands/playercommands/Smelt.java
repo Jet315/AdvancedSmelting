@@ -2,6 +2,8 @@ package me.jet315.smelting.commands.playercommands;
 
 import me.jet315.smelting.Core;
 import me.jet315.smelting.commands.CommandExecutor;
+import me.jet315.smelting.events.SmeltingInventoryOpenEvent;
+import me.jet315.smelting.events.SmeltingStartEvent;
 import me.jet315.smelting.utils.SmeltingType;
 import me.jet315.smelting.utils.Utils;
 import org.bukkit.ChatColor;
@@ -42,8 +44,14 @@ public class Smelt extends CommandExecutor {
         }
 
         if(Core.getInstance().getProperties().isInventoryEnabled()){
-            //Load inventory
 
+            //call event
+            SmeltingInventoryOpenEvent smeltingInventoryOpenEvent = new SmeltingInventoryOpenEvent(player);
+            Core.getInstance().getServer().getPluginManager().callEvent(smeltingInventoryOpenEvent);
+
+            if (smeltingInventoryOpenEvent.isCancelled()) return;
+
+            //Load inventory
             //Todo get the itemstack in the last possition, replace values, set item
             ItemStack item = Core.getInstance().getProperties().getConfirmItem();
             ItemMeta meta = item.getItemMeta();

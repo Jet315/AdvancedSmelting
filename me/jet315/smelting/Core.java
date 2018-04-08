@@ -9,6 +9,7 @@ import me.jet315.smelting.utils.ActionBar;
 import me.jet315.smelting.utils.Properties;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
+import org.bukkit.event.block.Action;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 

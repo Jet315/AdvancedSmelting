@@ -22,7 +22,7 @@ public class InventoryClick implements Listener{
     public void onClick(InventoryClickEvent e){
         //Check if moving to the Smelting inventory
         if(e.getClickedInventory() ==  null) return;
-        if(Core.getInstance().getSmeltingGUI().isSmeltingInvetory(e.getInventory())){
+        if(Core.getInstance().getSmeltingGUI().isSmeltingInventory(e.getInventory())){
             Player p = (Player) e.getWhoClicked();
             int getLastSlot = e.getInventory().getSize()-1;
             if(e.getCurrentItem() != null && e.getSlot() == getLastSlot){
@@ -39,12 +39,12 @@ public class InventoryClick implements Listener{
                 return;
             }
 
-            updateInvetoryPrice(e.getInventory());
+            updateInventoryPrice(e.getInventory());
 
         }
     }
 
-    public void updateInvetoryPrice(Inventory inventory){
+    public void updateInventoryPrice(Inventory inventory){
         Bukkit.getScheduler().runTaskLater(Core.getInstance(), new Runnable() {
             @Override
             public void run() {
