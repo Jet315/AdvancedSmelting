@@ -116,11 +116,6 @@ public class SmeltManager {
             }
             return;
         }
-        if(nullItems.size() > 0){
-            for(ItemStack item : nullItems){
-                p.getInventory().addItem(item);
-            }
-        }
 
         if (totalCost > 0) {
             if (Core.economy == null) {
@@ -149,6 +144,13 @@ public class SmeltManager {
                 return;
             }
         }
+
+        if(nullItems.size() > 0){
+            for(ItemStack item : nullItems){
+                p.getInventory().addItem(item);
+            }
+        }
+
         p.sendMessage(Core.getInstance().getProperties().getMessages().getSmeltStartMessage());
         SmeltPlayer smeltPlayer = new SmeltPlayer(p, p.getLocation(), validItems, (int) totalTimeInMillisecondsToSmelt, (int) (totalCoalNeeded + 0.98), (int) (totalCost + 0.5));
         activelySmelting.put(p, smeltPlayer);
