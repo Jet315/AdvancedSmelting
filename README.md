@@ -41,5 +41,5 @@ For Developers who want to hook into the plugin any events found here can be use
 
 # Support
 Any problems, questions or suggestions send me a PM on Spigot!
-
+https://www.spigotmc.org/resources/%E2%9C%A6-advancedsmelting-%E2%9C%A6-1-8-1-12-x-supported-%E2%9C%A6.54568/
 Thanks!
